@@ -12,6 +12,6 @@ export CSR_REPO_NAME=sstp-container-event
 export NEW_REPO=https://source.developers.google.com/p/$PROJECT_ID/r/$CSR_REPO_NAME
 
 
-gcloud config set compute/region $REGION //sets the default region used for regional services
+gcloud config set compute/region $REGION
 
-gcloud config set compute/zone $ZONE //sets the default Zone for Zonal services.
+gcloud config set compute/zone $ZONE
