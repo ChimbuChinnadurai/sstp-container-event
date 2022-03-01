@@ -18,11 +18,11 @@ steps:
 
 # build the container image
 - name: "gcr.io/cloud-builders/docker"
-  args: ["build", "-t", "$REGION-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/nginx:${SHORT_SHA}", "."]
+  args: [build, -t, '$REGION-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/nginx:${SHORT_SHA}', "."]
 
 # push container image
 - name: "gcr.io/cloud-builders/docker"
-  args: ["push", "$REGION-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/nginx:${SHORT_SHA}"]
+  args: [push, '$REGION-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/nginx:${SHORT_SHA}']
 # Get image digest for attesting BinAuth only works on image digest.
 - name: "gcr.io/cloud-builders/gke-deploy"
   entrypoint: bash  
@@ -42,6 +42,6 @@ steps:
        gcloud beta deploy releases create nginx-release-${SHORT_SHA} --project=$PROJECT_ID --region=$REGION --delivery-pipeline=my-nginx-app-1
 
 images:
-- “$REGION-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/nginx:${SHORT_SHA}”
+- $REGION-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/nginx:${SHORT_SHA}
 options:
   requestedVerifyOption: VERIFIED
