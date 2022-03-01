@@ -1,0 +1,7 @@
+name: cloud-build-nginx-trigger
+description: triggers the build and deploy of the nginx demo container
+filename: cloudbuild.yaml
+triggerTemplate:
+  repoName: sstp-container-event
+  projectId: $PROJECT_ID
+  branchName: ^main$
