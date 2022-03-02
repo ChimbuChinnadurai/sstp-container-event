@@ -10,7 +10,8 @@ export REPO_NAME=source-to-prod-demo
 export SHORT_SHA=\${SHORT_SHA}
 export CSR_REPO_NAME=sstp-container-event
 export NEW_REPO=https://source.developers.google.com/p/$PROJECT_ID/r/$CSR_REPO_NAME
-
+export ROUTER_NAME=nat-router
+export NAT_NAME=gke-nat
 
 gcloud config set compute/region $REGION
 
