@@ -19,7 +19,7 @@ metadata:
  name: qsdev
 description: development cluster
 gke:
- cluster: projects/$PROJECT_ID/locations/$ZONE/clusters/$DEV_CLUSTER
+ cluster: projects/$PROJECT_ID/locations/$REGION/clusters/$DEV_CLUSTER
 ---
 
 apiVersion: deploy.cloud.google.com/v1beta1
@@ -29,7 +29,7 @@ metadata:
 description: pre production cluster
 requireApproval: true
 gke:
- cluster: projects/$PROJECT_ID/locations/$ZONE/clusters/$PREPROD_CLUSTER
+ cluster: projects/$PROJECT_ID/locations/$REGION/clusters/$PREPROD_CLUSTER
 ---
 
 apiVersion: deploy.cloud.google.com/v1beta1
@@ -39,4 +39,4 @@ metadata:
 description: production cluster
 requireApproval: true
 gke:
- cluster: projects/$PROJECT_ID/locations/$ZONE/clusters/$PROD_CLUSTER
+ cluster: projects/$PROJECT_ID/locations/$REGION/clusters/$PROD_CLUSTER
