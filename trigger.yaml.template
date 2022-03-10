@@ -4,4 +4,4 @@ filename: cloudbuild.yaml
 triggerTemplate:
   repoName: sstp-container-event
   projectId: $PROJECT_ID
-  branchName: ^main$
+  branchName: .*
